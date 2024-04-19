@@ -1,6 +1,6 @@
 /******* Bootstrap Theming ********/
 
-$primary: #0BCEAF;
+$primary: #0b60ce;
 $secondary: #6c757d;
 $light: #ffffff;
 $dark: #343a40;
@@ -33,7 +33,7 @@ h3,
 }
 
 h4,
-h5
+h5,
 .font-weight-medium {
     font-weight: 500 !important;
 }
@@ -268,40 +268,71 @@ h6,
     left: 30px;
 }
 
-.testimonial-carousel .owl-dots {
-    margin-top: 25px;
-    text-align: center;
-}
-
-.testimonial-carousel .owl-dot {
-    display: inline-block;
-    margin: 0 5px;
-    width: 12px;
-    height: 12px;
-    border-radius: 10px;
-    background: #dddddd;
-}
-
-.testimonial-carousel .owl-dot.active {
-    background: $primary;
-}
-
-.blog-date {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    top: calc(50% - 30px);
-    left: calc(50% - 30px);
-    border-radius: 60px;
-    background: $primary;
-}
-
 .contact-form .help-block ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
+
+$skill-bar-color: #FF6F61; // example color
+$skill-bar-bg: #EFEFEF; // example background color
+
+$htmlcss: linear-gradient(to right, #de4b25, #254bdf);
+$js: #e8d44d;
+$react: #61dbfb;
+$vue: #08bf86;
+$bootstrap: linear-gradient(to bottom right, #910bfe, #6a07f3);
+$xamarin: #3a9bdc;
+
+
+.skills-header {
+    text-align: center;
+    margin-bottom: 1rem;
+    // Add any other styles like font size, color, etc.
+}
+
+.skill-label {
+    text-align: right;
+    padding-right: 1rem; // Spacing between text and bar
+    // Style according to your needs
+}
+
+.progress {
+    height: 20px; // Adjust the height of the progress bars
+    background-color: $skill-bar-bg;
+
+    .progress-bar {
+        //background-color: $skill-bar-color;
+        transition: width 1s ease; // Smooth transition for the bar
+        // Optional: add a shadow or any other style you want
+    }
+    .htmlcss {
+        background-color: $htmlcss;
+    }
+    .js {
+        background-color: $js;
+    }
+    .react {
+        background-color: $react;
+    }
+    .vue {
+        background-color: $vue;
+    }
+    .bootstrap {
+        background-color: $bootstrap;
+    }
+    .xamarin {
+        background-color: $xamarin;
+    }
+}
+
+
+
+// Use media queries for responsive adjustments if needed
+@media (max-width: 768px) {
+    .skill-label {
+        text-align: left;
+        padding-right: 0;
+    }
+}
+
